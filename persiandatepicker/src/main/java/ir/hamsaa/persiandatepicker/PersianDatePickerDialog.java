@@ -3,6 +3,7 @@ package ir.hamsaa.persiandatepicker;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -14,6 +15,7 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDialog;
+import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.content.ContextCompat;
 
@@ -70,6 +72,7 @@ public class PersianDatePickerDialog {
     private boolean isShowDayPicker = true;
     private int pickerBackgroundColor;
     private int pickerBackgroundDrawable;
+    private int pickerBackgroundResource;
     private int titleType = 0;
     private boolean showInBottomSheet;
 
@@ -280,6 +283,10 @@ public class PersianDatePickerDialog {
         this.pickerBackgroundDrawable = drawableBg;
         return this;
     }
+    public PersianDatePickerDialog setPickerBackgroundResource(@DrawableRes int drawableBg) {
+        this.pickerBackgroundResource = drawableBg;
+        return this;
+    }
 
     public PersianDatePickerDialog setTitleType(int titleType) {
         this.titleType = titleType;
@@ -310,6 +317,9 @@ public class PersianDatePickerDialog {
             datePickerView.setBackgroundColor(pickerBackgroundColor);
         } else if (pickerBackgroundDrawable != 0) {
             datePickerView.setBackgroundDrawable(pickerBackgroundDrawable);
+        }
+        if(pickerBackgroundResource!=0){
+            datePickerView.setBackgroundResource(pickerBackgroundResource);
         }
 
         if (maxYear > 0) {

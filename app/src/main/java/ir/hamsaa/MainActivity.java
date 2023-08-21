@@ -47,8 +47,10 @@ public class MainActivity extends AppCompatActivity {
                 .setMaxYear(1500)
                 .setInitDate(1370, 3, 13)
                 .setActionTextColor(Color.GRAY)
+//                .setPickerBackgroundDrawable(R.drawable.ic_launcher)
+                .setPickerBackgroundResource(R.drawable.ic_launcher)
                 .setTypeFace(typeface)
-//                .setShowDayPicker(false)
+                .setShowDayPicker(false)
                 .setTitleType(PersianDatePickerDialog.WEEKDAY_DAY_MONTH_YEAR)
                 .setShowInBottomSheet(true)
                 .setListener(new PersianPickerListener() {
@@ -88,9 +90,11 @@ public class MainActivity extends AppCompatActivity {
                 .setInitDate(initDate)
                 .setTypeFace(typeface)
                 .setBackgroundColor(Color.BLACK)
+                .setPickerBackgroundResource(R.mipmap.ic_launcher)
                 .setTitleColor(Color.WHITE)
                 .setActionTextColor(Color.RED)
                 .setPickerBackgroundDrawable(R.drawable.darkmode_bg)
+                .setPickerBackgroundResource(R.drawable.darkmode_bg)
                 .setTitleType(PersianDatePickerDialog.MONTH_YEAR)
                 .setShowDayPicker(false)
 
